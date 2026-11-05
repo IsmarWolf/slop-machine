@@ -1,0 +1,44 @@
+:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}
+/* Layout concept: a shrine stacked on a slot machine, with the Algorithm's paperwork spilling out below. */
+:root {
+  color-scheme: dark;
+  --void: #190b29;
+  --check: #25133a;
+  --panel: #1f0f30;
+  --plum: #6e2a57;
+  --crimson: #a51e41;
+  --crimson-hot: #d42a55;
+  --card: #fbfbf4;
+  --rule: #2a9d98;
+  --gold: #ffe81a;
+  --hot: #c5177d;
+  --lime: #8cff3f;
+  --bone: #f6f1df;
+  --mute: #b9a8cb;
+  --ink: #0a0510;
+  --display: "Anton", Impact, "Arial Narrow Bold", sans-serif;
+  --label: "Archivo Black", "Arial Black", sans-serif;
+  --voice: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive;
+}
+* { box-sizing: border-box; }
+html { background: var(--void); }
+body { background: var(--void); color: var(--bone); font-family: var(--voice); font-size: 17px; line-height: 1.45; }
+body::before {
+  content: ""; position: fixed; inset: -96px; z-index: -2;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Crect width='96' height='96' fill='%23190b29'/%3E%3Crect x='48' width='48' height='48' fill='%2325133a'/%3E%3Crect y='48' width='48' height='48' fill='%2325133a'/%3E%3C/svg%3E") 0 0 / 96px 96px;
+  animation: drift 14s linear infinite; will-change: transform;
+}
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 22%, transparent 25%, rgba(5,0,12,.72) 100%);
+}
+@keyframes drift { to { transform: translate(96px, 96px); } }
+button { font: inherit; color: inherit; cursor: pointer; }
+button::-moz-focus-inner { border: 0; padding: 0; }
+html { -moz-text-size-adjust: none; text-size-adjust: none; }
+body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+
+.page { overflow-x: clip; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 56px; }
+

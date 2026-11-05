@@ -1,0 +1,6 @@
+/* ticker */
+.ticker { background: var(--ink); border-bottom: 3px solid var(--plum); overflow: hidden; white-space: nowrap; font-family: var(--label); font-size: 12px; letter-spacing: .04em; color: var(--gold); height: 30px; line-height: 27px; }
+.ticker-run { will-change: transform; display: inline-block; animation: tick 80s linear infinite; padding-left: 16px; }
+.ticker-run span { margin-right: 44px; }
+.ticker-run b { color: var(--lime); font-weight: 400; }
+@keyframes tick { to { transform: translateX(-50%); } }

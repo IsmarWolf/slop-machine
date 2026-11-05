@@ -1,0 +1,23 @@
+
+@media (max-width: 1400px) { .sticker.c, .sticker.d { display: none; } }
+@media (max-width: 1060px) {
+  .stamp { position: static; justify-self: center; max-width: none; padding: 3px 12px; border-width: 3px; rotate: -2deg; }
+}
+@media (max-width: 920px) { .star { display: none; } }
+@media (max-width: 820px) {
+  .ledger, .side, .roadmap, .reviews { grid-column: 1 / -1; }
+  .listing { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .shrine { width: 150%; margin-left: -25%; margin-top: 8px; }
+  .tape { margin-top: -30px; }
+  .sticker.a { left: -6px; top: 184px; }
+  .sticker.b { right: -6px; top: 172px; }
+  .stamp { position: static; justify-self: center; max-width: none; padding: 3px 12px; border-width: 3px; rotate: -2deg; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .roadmap li { grid-template-columns: 62px minmax(0, 1fr); }
+}
+@media (max-width: 380px) { .shop { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
